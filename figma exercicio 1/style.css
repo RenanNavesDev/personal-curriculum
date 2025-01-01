@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: blueviolet;
+}
+
+.container {
+    width: 1200px;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+.illustration {
+    display: flex;
+    position: relative; /* Permite que as imagens sejam posicionadas relativamente ou absolutamente */
+    width: 50%; /* Altere conforme necessário */
+    height: 50%;
+    justify-content:flex-start;
+}
+
+/* Estilos para a primeira imagem */
+.img1 {
+    position: absolute; /* Para posicionar a imagem onde você quiser */
+    top: -65px; /* Ajuste para mover verticalmente */
+    left: 0px; /* Ajuste para mover horizontalmente */
+    width: 80%; /* Ajuste o tamanho */
+    z-index: 2;
+}
+
+/* Estilos para a segunda imagem */
+.img2 {
+    position: absolute;
+    top: -147px; /* Alterado para uma posição diferente */
+    left: 0px; /* Ajustado horizontalmente */
+    width: 80%; /* Tamanho menor */
+    z-index: 1;
+    
+}
+
+/* Estilos para a terceira imagem */
+.img3 {
+    position: absolute;
+    top: 120px;
+    left: -81px;
+    width: 28%;
+    z-index: 2;
+}
+
+
+h2 {
+    position: absolute;
+    top: 80px;
+    left: 54%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: black;
+    width: 100%;
+    font-size: 35px;
+}
+
+.faq-section {
+    width: 35%;
+    padding: 15px; 
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 120px;
+    
+    
+    
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    font-weight: normal;
+}
+
+.faq-item.active h3 {
+    font-weight: bold;
+}
+
+.faq-item h3:hover {
+    color: orange;
+}
+
+.faq-item .answer {
+    font-size: 16px;
+    color: #666;
+    display: none;
+    margin-top: 10px;
+}
+
+.faq-item.active .answer {
+    display: block;
+}
+
+.faq-item.active h3 span {
+    transform: rotate(45deg);
+}
